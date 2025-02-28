@@ -1,9 +1,16 @@
 import reflex as rx
 from link_bio.components.link_button import link_button
+from link_bio.components.title import title
 
 def links() -> rx.Component:
-    return rx.vstack(
-       link_button("Twich","https://www.facebook.com"),
-       link_button("Youtubeeeeeeeeeeeeeee","http://twicht.tv/mouredev"),
-       link_button("Discord","http://twicht.tv/mouredev")
-    )
+   return rx.vstack(
+      title("Comunidad"),
+      link_button("Twich","Directos lunes a viernes","https://www.facebook.com"),
+      link_button("Youtubeeeeeeeeeeeeeee","Tutoriales semanales","http://twicht.tv/mouredev"),
+      link_button("Discord","El chat de la comunidad","http://twicht.tv/mouredev"),
+      title("Comunidad"),
+      link_button("Twich","Directos lunes a viernes","https://www.facebook.com"),
+      link_button("Youtubeeeeeeeeeeeeeee","Tutoriales semanales","http://twicht.tv/mouredev"),
+      link_button("Discord","El chat de la comunidad","http://twicht.tv/mouredev"),
+      width="100%"
+   )

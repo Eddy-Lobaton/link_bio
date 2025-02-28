@@ -7,6 +7,7 @@ from link_bio.views.header.header import header
 from link_bio.views.links.links import links
 from link_bio.components.footer import footer
 import link_bio.styles.styles as styles
+from link_bio.styles.styles import Size as Size
 
 
 class State(rx.State):
@@ -21,7 +22,8 @@ def index() -> rx.Component:
                 header(),
                 links(),
                 max_width = styles.MAX_WIDTH,
-                margin = styles.Spacer.BIG.value,
+                width="100%",
+                margin_y= styles.Size.BIG.value
             ) ,
             width = "100%",
         ),
