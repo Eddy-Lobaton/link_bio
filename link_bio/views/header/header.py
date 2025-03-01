@@ -1,6 +1,8 @@
 import reflex as rx
 from link_bio.styles.styles import Size as Size
+from link_bio.components.info_text import info_text
 from link_bio.components.link_icon import link_icon
+
 
 def header() -> rx.Component:
     return rx.vstack(
@@ -18,8 +20,17 @@ def header() -> rx.Component:
                 link_icon("https://x.com/mouredev"),
                 link_icon("https://x.com/mouredev")
                 ),
-                align_items="start"
-            )
+                align_items="start",
+            ),
+            gap=Size.BIG.value
+        ),
+        rx.flex(
+            info_text("+10", "años de exp"),
+            rx.spacer(),
+            info_text("+10", "años de exp"),
+            rx.spacer(),
+            info_text("+10", "años de exp"),            
+            width="100%" 
         ),
         rx.text("""Egresado de la carrera de Geomática de SENCICO. Cuento con una experiencia de 9 años en actividades orientadas a la Geomática tanto en el sector público y privado. La formación académica recibida me permite desenvolverme en cualquier ambiente de trabajo de manera eficaz"""),
         gap = Size.BIG.value,
